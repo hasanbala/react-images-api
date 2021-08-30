@@ -1,16 +1,16 @@
 import React from "react";
+import ListImages from "./ListImages";
+import "./GetImages.css";
 
 const GetImages = ({ images }) => {
-  const imagesList = images.map((image) => {
-    return (
-      <img alt={image.description} key={image.id} src={image.urls.small} />
-    );
+  const getImagesList = images.map((image) => {
+    return <ListImages key={image.id} image={image} />;
   });
 
   return (
     <div className="image-list-container">
-      {images.length} results found
-      {imagesList}
+      {/* {images.length} results found */}
+      {getImagesList}
     </div>
   );
 };
