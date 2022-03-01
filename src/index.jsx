@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
+import { ImagesContext } from "./context";
+import { App } from "./app";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ImagesContext>
+      <App />
+    </ImagesContext>
   </React.StrictMode>,
   document.getElementById("root")
 );
